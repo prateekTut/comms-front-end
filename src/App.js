@@ -69,7 +69,7 @@ function App() {
       return item;
     }));
     
-    console.log(inboxEmails);
+
     setSentEmails(sentEmails.map(item => {
       if (item.threadId === read) {
         item.LabelIds = item.LabelIds.filter(label => label!=="UNREAD")
@@ -111,6 +111,7 @@ function App() {
         )
           .then((response) => response.text())
           .then((data) => {
+            console.log(data);
             data = data.replace(/&quot;/g, '\\"');
             data = JSON.parse(data);
             setInboxEmails(data["emails"]);
@@ -132,6 +133,7 @@ function App() {
         )
           .then((response) => response.text())
           .then((data) => {
+            console.log(data);
             data = data.replace(/&quot;/g, '\\"');
             data = JSON.parse(data);
             setInboxEmails(data["emails"]);

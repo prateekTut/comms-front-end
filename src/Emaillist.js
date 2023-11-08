@@ -25,6 +25,8 @@ function Emaillist({ emails , setEventInbox, isLoadingInbox, setIsLoadingInbox})
     );
   }
 
+  console.log(emails, "in emails");
+
   // aggragting diferent conversations
   if (emails) {
     length.current=emails.length;

@@ -380,16 +380,16 @@ function Mail({ setId, setRead }) {
       replyTo = values.From.concat(values.Cc).concat(values.To);
       console.log(replyTo)
       // Extract the single element from the array
-      if (replyTo.length != 0) {
+      /* if (replyTo.length != 0) {
 
         const maskedEmail = replyTo[0];
-
+        console.log("masked email", maskedEmail);
         // Split the input string into email and name
         const parts = maskedEmail.split(" ");
 
         // Extract the email part
         const email = parts[0];
-
+        console.log(email);
         // Encode the email to base64
         const emailBase64 = atob(email);
 
@@ -399,7 +399,7 @@ function Mail({ setId, setRead }) {
       } else {
         replyTo = replyTo[0];
 
-      }
+      } */
 
       /* replyTo = replyTo.filter(array => !array.includes(meEmailCode));
       replyTo = replyTo.map((item) => item.split(' ')[1])
